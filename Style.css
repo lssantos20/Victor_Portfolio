@@ -50,6 +50,7 @@ html {
     background-color: #333;
     padding: 10px;
     display: none;
+    margin: 209vh 100vh;
   }
 
   .menu ul {
@@ -146,22 +147,34 @@ ul {
   list-style-type: none;
 }
 
-a {
-  color: #f4f4f4;
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.menu ul li {
+  position: relative;
+  margin: 0 10px; /* Espaçamento entre os itens */
+}
+
+.menu ul li a {
   text-decoration: none;
+  color: #f4f4f4;
   padding: 14px 16px;
+  position: relative;
+  display: block;
+  font-family: "Roboto", sans-serif;
 }
-
-a:not(:first-child) {
-}
-
-a {
+.menu ul li:not(:last-child) a::after {
   content: "";
-  border-left: 1px solid #fff; /* Barra entre os links */
-  top: 50%; /* Centraliza verticalmente */
-  transform: translateY(-50%); /* Ajusta para centralizar a barra */
-  height: 10%; /* Ajuste a altura da barra, 50% do link */
-  width: 1px; /* Largura da barra */
+  position: absolute;
+  right: -10px; /* Distância da barra em relação ao texto */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 40%; /* Define a altura da barra vertical */
+  background-color: #fff; /* Cor da barra */
 }
 .grid {
 }
